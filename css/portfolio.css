@@ -1,0 +1,52 @@
+.portfolio_container {
+  font-size: 2rem;
+  flex: 1 0 auto;
+}
+.port_title {
+  color: red;
+}
+
+.port_work {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5rem;
+  row-gap: 5rem;
+  padding: 3rem 1rem;
+  justify-content: center;
+}
+.work {
+  /* border: 2px solid black ; */
+  min-width: 15rem;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem black;
+  flex-wrap: wrap;
+  animation: 3s ease 0s 1 fade;
+}
+.work:hover {
+  box-shadow: 0 0 0.7rem blue;
+  transform: translateY(-1rem);
+}
+.work_img {
+  width: 100%;
+}
+
+.work_btn {
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background: rgb(2, 22, 109);
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease;
+}
+
+.work_btn:hover {
+  background: rgb(238, 0, 0);
+}

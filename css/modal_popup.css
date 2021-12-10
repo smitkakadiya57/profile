@@ -1,0 +1,111 @@
+/* css for modal popup */
+
+/* main modal css */
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.582);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-container {
+  background: white;
+  width: 80%;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
+}
+
+/* remove this part  */
+.btn-purple {
+  background: #6b46c1;
+  padding: 10px 40px;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin-bottom: 10px;
+}
+
+.modal-content {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.modal_right img {
+  min-width: 8rem;
+  max-width: 100%;
+  box-shadow: 0 0 0.3rem black;
+  border-radius: 1rem;
+}
+
+.modal_left {
+  /* border: 2px solid black; */
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.pro_see {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+}
+.pro_see a img {
+  width: 5rem;
+}
+.pro_see a img:hover {
+  filter: drop-shadow(0 0rem 0.5rem var(--gold));
+}
+.modal-container button.close {
+  position: absolute;
+  right: 2rem;
+  top: 0rem;
+  font-size: 6rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-wrapper.active .modal-container {
+  transform: translateY(0px);
+}
+
+@media screen and (max-width: 500px) {
+  .modal-container {
+    width: 95%;
+  }
+  .modal-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+  }
+  .modal_right {
+    width: 100%;
+  }
+  .modal_left {
+    width: 100%;
+  }
+}
